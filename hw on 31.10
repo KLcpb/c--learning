@@ -1,0 +1,42 @@
+abstract class Animal
+{
+    protected string _name;
+    protected int _weight;
+
+    public abstract void makeSound();
+}
+
+class Cat : Animal
+{
+    public Cat(string name,int weight){
+        _name = name;
+        _weight = weight;
+    }
+    public override void makeSound()
+    {
+        Console.WriteLine("мяумяу");
+    }
+}
+class Dog : Animal
+{
+    public Dog(string name,int weight){
+        _name = name;
+        _weight = weight;
+    }
+    public override void makeSound()
+    {
+        Console.WriteLine("гавгав");
+    }
+}
+
+class Program
+{
+    public static void Main (string[] args) 
+    {
+        Cat cat = new Cat("avc",12);
+        Dog dog = new Dog("bebebe",52);
+
+        cat.makeSound();
+        dog.makeSound();
+    }
+}
